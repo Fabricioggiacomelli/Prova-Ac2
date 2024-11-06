@@ -3,7 +3,7 @@ function cad() {
     const col = document.createElement('div');
     col.classList.add('col-md-3', 'mb-3');
     const randomNum = Math.floor(Math.random() * 1000);
-    
+
     col.innerHTML = `
         <div class="card">
             <img src="https://picsum.photos/400/200?random=${randomNum}" class="card-img-top" alt="">
@@ -11,7 +11,7 @@ function cad() {
                 <h5 class="card-title">${titulo}</h5>
                 <button class="btn btn-danger" onclick="removerCard(this)">Remover</button>
             </div>
-        </div>
+        </div>  
     `;
 
     const container = document.getElementById('container');
@@ -20,7 +20,7 @@ function cad() {
 }
 
 function removerCard(botao) {
-    botao.closest('.col-md-4').remove();
+    botao.closest('.col-md-3').remove();
 }
 
 function Delete() {
